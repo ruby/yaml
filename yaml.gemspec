@@ -4,7 +4,7 @@ require "yaml/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "yaml"
-  spec.version       = Yaml::VERSION
+  spec.version       = YAML::VERSION
   spec.authors       = ["Hiroshi SHIBATA"]
   spec.email         = ["hsbt@ruby-lang.org"]
 
