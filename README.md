@@ -1,8 +1,8 @@
-# Yaml
+# YAML
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/yaml`. To experiment with that code, run `bin/console` for an interactive prompt.
+This module provides a Ruby interface for data serialization in YAML format.
 
-TODO: Delete this and the text above, and describe your gem
+The YAML module is an alias of Psych, the YAML engine for Ruby.
 
 ## Installation
 
@@ -22,7 +22,46 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Working with YAML can be very simple, for example:
+
+```ruby
+require 'yaml'
+
+# Parse a YAML string
+YAML.load("--- foo") #=> "foo"
+
+# Emit some YAML
+YAML.dump("foo")     # => "--- foo\n...\n"
+{ :a => 'b'}.to_yaml  # => "---\n:a: b\n"
+```
+
+As the implementation is provided by the Psych library, detailed documentation
+can be found in that library's docs (also part of standard library).
+
+## Security
+
+Do not use YAML to load untrusted data. Doing so is unsafe and could allow
+malicious input to execute arbitrary code inside your application.
+
+## History
+
+Syck was the original for YAML implementation in Ruby's standard library
+developed by why the lucky stiff.
+
+You can still use Syck, if you prefer, for parsing and emitting YAML, but you
+must install the 'syck' gem now in order to use it.
+
+In older Ruby versions, ie. <= 1.9, Syck is still provided, however it was
+completely removed with the release of Ruby 2.0.0.
+
+## More info
+
+For more advanced details on the implementation see Psych, and also check out
+http://yaml.org for spec details and other helpful information.
+
+Psych is maintained by Aaron Patterson on github: https://github.com/tenderlove/psych
+
+Syck can also be found on github: https://github.com/tenderlove/syck
 
 ## Development
 
@@ -32,4 +71,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/hsbt/yaml.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ruby/yaml.
