@@ -1,12 +1,14 @@
-lib = File.expand_path("lib", __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "yaml/version"
+begin
+  require_relative "lib/yaml/version"
+rescue LoadError # Fallback to load version file in ruby core repository
+  require_relative "version"
+end
 
 Gem::Specification.new do |spec|
   spec.name          = "yaml"
   spec.version       = YAML::VERSION
-  spec.authors       = ["Hiroshi SHIBATA"]
-  spec.email         = ["hsbt@ruby-lang.org"]
+  spec.authors       = ["Aaron Patterson", "SHIBATA Hiroshi"]
+  spec.email         = ["aaron@tenderlovemaking.com", "hsbt@ruby-lang.org"]
 
   spec.summary       = "YAML Ain't Markup Language"
   spec.description   = spec.summary
