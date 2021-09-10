@@ -2,9 +2,9 @@
 
 This module provides a Ruby interface for data serialization in YAML format.
 
-The \YAML module is an alias for
+The `YAML` module is an alias for
 [Psych](https://ruby-doc.org/stdlib/libdoc/psych/rdoc/index.html),
-the \YAML engine for Ruby.
+the `YAML` engine for Ruby.
 
 ## Installation
 
