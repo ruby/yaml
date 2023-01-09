@@ -40,12 +40,6 @@ YAML = Psych # :nodoc:
 # As the implementation is provided by the Psych library, detailed documentation
 # can be found in that library's docs (also part of standard library).
 #
-# == Security
-#
-# Do not use YAML to load untrusted data. Doing so is unsafe and could allow
-# malicious input to execute arbitrary code inside your application. Please see
-# doc/security.rdoc for more information.
-#
 # == History
 #
 # Syck was the original YAML implementation in Ruby's standard library

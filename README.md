@@ -42,8 +42,8 @@ For detailed documentation, see
 
 ## Security
 
-Do not use YAML to load untrusted data. Doing so is unsafe and could allow
-malicious input to execute arbitrary code inside your application.
+This module is safe to load untrusted YAML as `Psych.load`, which calls `Psych.safe_load` is used.
+Do not use `YAML.unsafe_load` with untrusted data as doing so will allow malicious input to execute arbitrary code inside your application.
 
 ## History
 
