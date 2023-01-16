@@ -38,7 +38,7 @@ YAML.dump("foo")     # => "--- foo\n...\n"
 ```
 
 For detailed documentation, see
-[Psych](https://ruby-doc.org/stdlib/libdoc/psych/rdoc/index.html).
+[Psych](https://ruby-doc.org/stdlib/exts/psych/Psych.html).
 
 ## Security
 
