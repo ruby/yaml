@@ -23,7 +23,7 @@ jobs:
             ruby: 2.5
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v4.1.7
+    - uses: actions/checkout@v4.2.0
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
