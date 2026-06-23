@@ -4,10 +4,7 @@
 #
 require 'yaml'
 
-begin
-  require 'pstore'
-rescue LoadError
-end
+require 'pstore'
 
 # YAML::Store provides the same functionality as PStore, except it uses YAML
 # to dump objects instead of Marshal.
