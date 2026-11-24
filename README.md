@@ -59,7 +59,7 @@ completely removed with the release of Ruby 2.0.0.
 ## More info
 
 For more advanced details on the implementation see Psych, and also check out
-http://yaml.org for spec details and other helpful information.
+https://yaml.org for spec details and other helpful information.
 
 Psych is maintained by Aaron Patterson on github: https://github.com/tenderlove/psych
 
